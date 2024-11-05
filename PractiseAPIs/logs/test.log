@@ -1,0 +1,192 @@
+2024-11-05 11:10:07 INFO  VerifyLoginTest:46 - Extent Report initialized successfully.
+2024-11-05 11:10:07 INFO  VerifyLoginTest:59 - Test Case Started: testEmptyRequest
+2024-11-05 11:10:12 INFO  VerifyLoginTest:76 - Test Case Passed: testEmptyRequest
+2024-11-05 11:10:12 INFO  VerifyLoginTest:59 - Test Case Started: testIncorrectPassword
+2024-11-05 11:10:13 INFO  VerifyLoginTest:76 - Test Case Passed: testIncorrectPassword
+2024-11-05 11:10:13 INFO  VerifyLoginTest:59 - Test Case Started: testMissingEmail
+2024-11-05 11:10:14 INFO  VerifyLoginTest:76 - Test Case Passed: testMissingEmail
+2024-11-05 11:10:14 INFO  VerifyLoginTest:59 - Test Case Started: testNonexistentUser
+2024-11-05 11:10:16 INFO  VerifyLoginTest:76 - Test Case Passed: testNonexistentUser
+2024-11-05 11:10:16 INFO  VerifyLoginTest:59 - Test Case Started: testVerifyLoginSuccess
+2024-11-05 11:10:17 INFO  VerifyLoginTest:76 - Test Case Passed: testVerifyLoginSuccess
+2024-11-05 11:10:17 INFO  VerifyLoginTest:59 - Test Case Started: testCreateAccountSuccess
+2024-11-05 11:10:18 INFO  VerifyLoginTest:70 - Test Case Failed: testCreateAccountSuccess
+2024-11-05 11:10:18 INFO  VerifyLoginTest:71 - Failure Reason: 1 expectation failed.
+Expected status code <201> but was <200>.
+
+2024-11-05 11:10:18 INFO  VerifyLoginTest:72 - Request Log:
+Request method:	POST
+Request URI:	https://automationexercise.com/api/createAccount
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	country=United States
+				firstname=John
+				address2=Apt 4B
+				city=Los Angeles
+				birth_month=January
+				address1=123 Main St
+				birth_date=1
+				title=Mr
+				birth_year=1990
+				lastname=Doe
+				zipcode=12345
+				password=jimmy12345
+				name=Jimmy
+				company=Example Corp
+				state=California
+				mobile_number=1234567890
+				email=jimmy@example.com
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+2024-11-05 11:10:18 INFO  VerifyLoginTest:73 - Response Log:
+HTTP/1.1 200 OK
+Date: Tue, 05 Nov 2024 05:40:18 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+vary: Accept,Cookie,Accept-Encoding
+referrer-policy: same-origin
+x-frame-options: DENY
+x-content-type-options: nosniff
+allow: POST, OPTIONS
+x-powered-by: Phusion Passenger(R) 6.0.23
+status: 200 OK
+cf-cache-status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=D0qO7HpFXgWAUJWZnlV%2Br24xXe9oqvkYnLKCc8bfjPQfvTU4Zzm8upreQRRXVWXZY1fuujMPUHa%2B67r6sNZjkOYviFmMNcVpFl2Kv4gi5H3T%2Bb%2FtoaVje6Ub43fPSYGWO5dsoU7ieNwU"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 8dda82205f2ce286-MRS
+Content-Encoding: gzip
+alt-svc: h3=":443"; ma=86400
+server-timing: cfL4;desc="?proto=TCP&rtt=130268&sent=5&recv=6&lost=0&retrans=0&sent_bytes=3143&recv_bytes=1201&delivery_rate=29481&cwnd=251&unsent_bytes=0&cid=4f2007ded0a404be&ts=325&x=0"
+
+<html>
+  <body>{"responseCode": 400, "message": "Email already exists!"}</body>
+</html>
+
+2024-11-05 11:10:18 INFO  VerifyLoginTest:59 - Test Case Started: testExistingEmail
+2024-11-05 11:10:19 INFO  VerifyLoginTest:76 - Test Case Passed: testExistingEmail
+2024-11-05 11:10:19 INFO  VerifyLoginTest:59 - Test Case Started: testInvalidEmailFormat
+2024-11-05 11:10:20 INFO  VerifyLoginTest:70 - Test Case Failed: testInvalidEmailFormat
+2024-11-05 11:10:20 INFO  VerifyLoginTest:71 - Failure Reason: expected [Invalid EMail] but found [Email already exists!]
+2024-11-05 11:10:20 INFO  VerifyLoginTest:72 - Request Log:
+Request method:	POST
+Request URI:	https://automationexercise.com/api/createAccount
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	country=United States
+				firstname=John
+				address2=Apt 4B
+				city=Los Angeles
+				birth_month=January
+				address1=123 Main St
+				birth_date=1
+				title=Mr
+				birth_year=1990
+				lastname=Doe
+				zipcode=12345
+				password=password123
+				name=John Doe
+				company=Example Corp
+				state=California
+				mobile_number=9999999999
+				email=johndoe
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+2024-11-05 11:10:20 INFO  VerifyLoginTest:73 - Response Log:
+HTTP/1.1 200 OK
+Date: Tue, 05 Nov 2024 05:40:21 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+vary: Accept,Cookie,Accept-Encoding
+referrer-policy: same-origin
+x-frame-options: DENY
+x-content-type-options: nosniff
+allow: POST, OPTIONS
+x-powered-by: Phusion Passenger(R) 6.0.23
+status: 200 OK
+cf-cache-status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=ZMjl82zb2bs2K%2BXrDY9M2GZF%2Fj1ZPyIwrX5gcCfxGo5E7ShFbbYqwOew5HUAJE7J9Hly4se60RvXzA52qq2JBGjYxBGbycYU0f9Q5FwHETV%2Bepf7MfJBGi6g44Vo6DtVoJ6c6bYNoi0K"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 8dda822dbef418a2-MRS
+Content-Encoding: gzip
+alt-svc: h3=":443"; ma=86400
+server-timing: cfL4;desc="?proto=TCP&rtt=134740&sent=5&recv=6&lost=0&retrans=0&sent_bytes=3142&recv_bytes=1195&delivery_rate=28904&cwnd=173&unsent_bytes=0&cid=3e49e122a2f7619b&ts=816&x=0"
+
+<html>
+  <body>{"responseCode": 400, "message": "Email already exists!"}</body>
+</html>
+
+2024-11-05 11:10:20 INFO  VerifyLoginTest:59 - Test Case Started: testMissingRequiredFields
+2024-11-05 11:10:21 INFO  VerifyLoginTest:76 - Test Case Passed: testMissingRequiredFields
+2024-11-05 11:10:21 INFO  VerifyLoginTest:59 - Test Case Started: testGetAllBrandsListSuccess
+2024-11-05 11:10:23 INFO  VerifyLoginTest:76 - Test Case Passed: testGetAllBrandsListSuccess
+2024-11-05 11:10:23 INFO  VerifyLoginTest:59 - Test Case Started: testInvalidEndpoint
+2024-11-05 11:10:24 INFO  VerifyLoginTest:76 - Test Case Passed: testInvalidEndpoint
+2024-11-05 11:10:24 INFO  VerifyLoginTest:59 - Test Case Started: testUnsupportedMethod
+2024-11-05 11:10:25 INFO  VerifyLoginTest:76 - Test Case Passed: testUnsupportedMethod
+2024-11-05 11:10:25 INFO  VerifyLoginTest:59 - Test Case Started: testContentType
+2024-11-05 11:10:26 INFO  VerifyLoginTest:76 - Test Case Passed: testContentType
+2024-11-05 11:10:26 INFO  VerifyLoginTest:59 - Test Case Started: testInvalidProductName
+2024-11-05 11:10:27 INFO  VerifyLoginTest:76 - Test Case Passed: testInvalidProductName
+2024-11-05 11:10:27 INFO  VerifyLoginTest:59 - Test Case Started: testMissingRequiredParameter
+2024-11-05 11:10:28 INFO  VerifyLoginTest:76 - Test Case Passed: testMissingRequiredParameter
+2024-11-05 11:10:28 INFO  VerifyLoginTest:59 - Test Case Started: testProductStructure
+2024-11-05 11:10:29 INFO  VerifyLoginTest:76 - Test Case Passed: testProductStructure
+2024-11-05 11:10:29 INFO  VerifyLoginTest:59 - Test Case Started: testResponseTime
+2024-11-05 11:10:30 INFO  VerifyLoginTest:76 - Test Case Passed: testResponseTime
+2024-11-05 11:10:30 INFO  VerifyLoginTest:59 - Test Case Started: testSearchProductSuccess
+2024-11-05 11:10:31 INFO  VerifyLoginTest:76 - Test Case Passed: testSearchProductSuccess
+2024-11-05 11:10:31 INFO  VerifyLoginTest:59 - Test Case Started: testSpecialCharactersInProductName
+2024-11-05 11:10:32 INFO  VerifyLoginTest:76 - Test Case Passed: testSpecialCharactersInProductName
+2024-11-05 11:10:32 INFO  VerifyLoginTest:59 - Test Case Started: testSpecificProductDetails
+2024-11-05 11:10:34 INFO  VerifyLoginTest:76 - Test Case Passed: testSpecificProductDetails
+2024-11-05 11:10:34 INFO  VerifyLoginTest:59 - Test Case Started: testUnsupportedMethod
+2024-11-05 11:10:35 INFO  VerifyLoginTest:76 - Test Case Passed: testUnsupportedMethod
+2024-11-05 11:10:35 INFO  VerifyLoginTest:59 - Test Case Started: testIncorrectPassword
+2024-11-05 11:10:37 INFO  VerifyLoginTest:76 - Test Case Passed: testIncorrectPassword
+2024-11-05 11:10:37 INFO  VerifyLoginTest:59 - Test Case Started: testInvalidEmailFormat
+2024-11-05 11:10:38 INFO  VerifyLoginTest:76 - Test Case Passed: testInvalidEmailFormat
+2024-11-05 11:10:38 INFO  VerifyLoginTest:59 - Test Case Started: testMissingEmailParameter
+2024-11-05 11:10:39 INFO  VerifyLoginTest:76 - Test Case Passed: testMissingEmailParameter
+2024-11-05 11:10:39 INFO  VerifyLoginTest:59 - Test Case Started: testMissingPasswordParameter
+2024-11-05 11:10:40 INFO  VerifyLoginTest:76 - Test Case Passed: testMissingPasswordParameter
+2024-11-05 11:10:40 INFO  VerifyLoginTest:59 - Test Case Started: testNonexistentEmail
+2024-11-05 11:10:41 INFO  VerifyLoginTest:76 - Test Case Passed: testNonexistentEmail
+2024-11-05 11:10:41 INFO  VerifyLoginTest:59 - Test Case Started: testInvalidEmailFormat
+2024-11-05 11:10:42 INFO  VerifyLoginTest:76 - Test Case Passed: testInvalidEmailFormat
+2024-11-05 11:10:42 INFO  VerifyLoginTest:59 - Test Case Started: testMissingEmailParameter
+2024-11-05 11:10:43 INFO  VerifyLoginTest:76 - Test Case Passed: testMissingEmailParameter
+2024-11-05 11:10:43 INFO  VerifyLoginTest:59 - Test Case Started: testNonexistentEmail
+2024-11-05 11:10:45 INFO  VerifyLoginTest:76 - Test Case Passed: testNonexistentEmail
+2024-11-05 11:10:45 INFO  VerifyLoginTest:59 - Test Case Started: testContentType
+2024-11-05 11:10:46 INFO  VerifyLoginTest:76 - Test Case Passed: testContentType
+2024-11-05 11:10:46 INFO  VerifyLoginTest:59 - Test Case Started: testFilterByCategory
+2024-11-05 11:10:47 INFO  VerifyLoginTest:76 - Test Case Passed: testFilterByCategory
+2024-11-05 11:10:47 INFO  VerifyLoginTest:59 - Test Case Started: testGetAllProductsListSuccess
+2024-11-05 11:10:48 INFO  VerifyLoginTest:76 - Test Case Passed: testGetAllProductsListSuccess
+2024-11-05 11:10:48 INFO  VerifyLoginTest:59 - Test Case Started: testProductStructure
+2024-11-05 11:10:49 INFO  VerifyLoginTest:76 - Test Case Passed: testProductStructure
+2024-11-05 11:10:49 INFO  VerifyLoginTest:59 - Test Case Started: testResponseContainsProducts
+2024-11-05 11:10:50 INFO  VerifyLoginTest:76 - Test Case Passed: testResponseContainsProducts
+2024-11-05 11:10:50 INFO  VerifyLoginTest:59 - Test Case Started: testResponseTime
+2024-11-05 11:10:53 INFO  VerifyLoginTest:76 - Test Case Passed: testResponseTime
+2024-11-05 11:10:53 INFO  VerifyLoginTest:59 - Test Case Started: testSpecificProductDetails
+2024-11-05 11:10:54 INFO  VerifyLoginTest:76 - Test Case Passed: testSpecificProductDetails
+2024-11-05 11:10:54 INFO  VerifyLoginTest:59 - Test Case Started: testUnsupportedMethod
+2024-11-05 11:10:55 INFO  VerifyLoginTest:76 - Test Case Passed: testUnsupportedMethod
+2024-11-05 11:10:55 INFO  VerifyLoginTest:89 - Extent Report flushed successfully.
